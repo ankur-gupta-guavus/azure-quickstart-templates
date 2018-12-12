@@ -68,10 +68,17 @@
       "metadata": {
         "description": "Location for all resources."
       }
+    },
+    "stgaccountName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Stg account name."
+      }
     }
   },
   "variables": {
-    "clusterStorageAccountName": "[concat(parameters('clusterName'),'store')]",
+    "clusterStorageAccountName": "[parameters('stgaccountName')]",
     "storageAccountType": "Standard_LRS",
     "applicationName": "new-edgenode"
   },
